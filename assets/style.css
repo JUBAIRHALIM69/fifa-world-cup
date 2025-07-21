@@ -28,6 +28,41 @@
 /* shared style end  */
 
 /* banner style  */
+/* Animation */
+@keyframes banner-container-animation{
+   0%{
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+
+   50%{
+      opacity: 0.5;
+      transform: translateX(-10px);
+   }
+   100%{
+      opacity: 1;
+      transform: translateX(0px);
+   }
+}
+@keyframes banner-player-animation{
+   0%{
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+
+   50%{
+      opacity: 0.5;
+      transform: translateX(-10px);
+   }
+   100%{
+      opacity: 1;
+      transform: translateX(0px);
+   }
+}
+
+
+
+
 .banner-container {
   background-color: black;
   display: flex;
@@ -36,7 +71,9 @@
   color: white;
   margin: 50px auto;
   border-radius: 10px;
+  animation: banner-container-animation 0.77s ease-out forwards; 
 }
+
 
 .banner-left {
   padding: 45px;
@@ -56,6 +93,7 @@ img {
 }
 .banner-right img {
   display: block;
+  animation: banner-player-animation 1s ease-out infinite;
 }
 
 /* upcoming-matches */
@@ -128,6 +166,9 @@ img {
   .upcoming-matches-right {
     grid-template-columns: repeat(2, 1fr);
   }
+  .banner-container{
+   margin: 5px;
+  }
 }
 /* responsive media for mobile device  */
 @media (max-width: 768px) {
@@ -135,6 +176,7 @@ img {
     flex-direction: column;
     text-align: center;
     padding-top: 20px;
+    margin: 5px;
 
   }
   .upcoming-matches-right {
